@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "./card";
+import "./top-card-list.css";
 
 const cardListData = [
 	{
@@ -30,7 +31,7 @@ const cardListData = [
 		id: 4,
 		username: "@jommartinez_",
 		followers: "999",
-		todayFollowers: -2,
+		todayFollowers: 2,
 		icon: "images/icon-youtube.svg",
 		name: "youtube",
 	},

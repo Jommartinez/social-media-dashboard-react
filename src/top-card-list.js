@@ -1,66 +1,49 @@
 import React from "react";
+import Card from "./card";
+
+const cardListData = [
+	{
+		id: 1,
+		username: "@jommartinez_",
+		followers: "666",
+		todayFollowers: 12,
+		icon: "images/icon-facebook.svg",
+		name: "facebook",
+	},
+	{
+		id: 2,
+		username: "@jommartinez_",
+		followers: "777",
+		todayFollowers: 20,
+		icon: "images/icon-twitter.svg",
+		name: "twitter",
+	},
+	{
+		id: 3,
+		username: "@jommartinez_",
+		followers: "888",
+		todayFollowers: 30,
+		icon: "images/icon-instagram.svg",
+		name: "instagram",
+	},
+	{
+		id: 4,
+		username: "@jommartinez_",
+		followers: "999",
+		todayFollowers: -2,
+		icon: "images/icon-youtube.svg",
+		name: "youtube",
+	},
+];
 
 function TopCardList() {
 	return (
 		<section className="top-card">
 			<div className="wrapper">
 				<div className="grid">
-					<article className="card facebook">
-						<p className="card-title">
-							<img src="images/icon-facebook.svg" alt="Facebook" />
-							@jommartinez_
-						</p>
-						<p className="card-followers">
-							<span className="card-followers-number">666</span>
-							<span className="card-followers-title">Followers</span>
-						</p>
-						<p className="card-today">
-							<img src="images/icon-up.svg" alt="icon up" />
-							12 Today
-						</p>
-					</article>
-					<article className="card twitter">
-						<p className="card-title">
-							<img src="images/icon-twitter.svg" alt="twitter" />
-							@jommartinez_
-						</p>
-						<p className="card-followers">
-							<span className="card-followers-number">666</span>
-							<span className="card-followers-title">Followers</span>
-						</p>
-						<p className="card-today">
-							<img src="images/icon-up.svg" alt="icon up" />
-							12 Today
-						</p>
-					</article>
-					<article className="card instagram">
-						<p className="card-title">
-							<img src="images/icon-instagram.svg" alt="instagram" />
-							@jommartinez_
-						</p>
-						<p className="card-followers">
-							<span className="card-followers-number">666</span>
-							<span className="card-followers-title">Followers</span>
-						</p>
-						<p className="card-today">
-							<img src="images/icon-up.svg" alt="icon up" />
-							12 Today
-						</p>
-					</article>
-					<article className="card youtube">
-						<p className="card-title">
-							<img src="images/icon-youtube.svg" alt="youtube" />
-							@jommartinez_
-						</p>
-						<p className="card-followers">
-							<span className="card-followers-number">666</span>
-							<span className="card-followers-title">Followers</span>
-						</p>
-						<p className="card-today">
-							<img src="images/icon-up.svg" alt="icon up" />
-							12 Today
-						</p>
-					</article>
+					{cardListData.map((cardData) => (
+						<Card key={cardData.id} {...cardData} />
+					))}
 				</div>
 			</div>
 		</section>
